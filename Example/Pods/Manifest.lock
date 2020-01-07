@@ -1,16 +1,16 @@
 PODS:
-  - QRCodeScanner (0.1.0)
+  - WLQRCodeScanner (1.0.0)
 
 DEPENDENCIES:
-  - QRCodeScanner (from `../`)
+  - WLQRCodeScanner (from `../`)
 
 EXTERNAL SOURCES:
-  QRCodeScanner:
+  WLQRCodeScanner:
     :path: "../"
 
 SPEC CHECKSUMS:
-  QRCodeScanner: 0b3d130cf2a916333302ce8495c9e17f7d35ca08
+  WLQRCodeScanner: 786536ef395b4dc5f78f215b02822215628199de
 
-PODFILE CHECKSUM: e12b26bb04d4152d08e8e81ade5733c67598f29d
+PODFILE CHECKSUM: 58edc5c978af9cf1c99e3863d231af949ffa5b9f
 
 COCOAPODS: 1.7.0

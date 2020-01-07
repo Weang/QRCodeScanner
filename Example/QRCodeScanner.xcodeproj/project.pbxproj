@@ -293,11 +293,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-QRCodeScanner_Example/Pods-QRCodeScanner_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/QRCodeScanner/QRCodeScanner.framework",
+				"${BUILT_PRODUCTS_DIR}/WLQRCodeScanner/WLQRCodeScanner.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeScanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WLQRCodeScanner.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## QRCodeScanner
+## WLQRCodeScanner
 
 Copyright (c) 2020 w704444178@qq.com <w704444178@qq.com>
 

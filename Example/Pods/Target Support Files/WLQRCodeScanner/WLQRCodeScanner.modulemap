@@ -1,0 +1,6 @@
+framework module WLQRCodeScanner {
+  umbrella header "WLQRCodeScanner-umbrella.h"
+
+  export *
+  module * { export * }
+}

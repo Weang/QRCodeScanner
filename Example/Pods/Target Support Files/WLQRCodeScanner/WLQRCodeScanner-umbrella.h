@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double QRCodeScannerVersionNumber;
-FOUNDATION_EXPORT const unsigned char QRCodeScannerVersionString[];
+FOUNDATION_EXPORT double WLQRCodeScannerVersionNumber;
+FOUNDATION_EXPORT const unsigned char WLQRCodeScannerVersionString[];
 

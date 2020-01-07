@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'QRCodeScanner_Example' do
-  pod 'QRCodeScanner', :path => '../'
+  pod 'WLQRCodeScanner', :path => '../'
 
   target 'QRCodeScanner_Tests' do
     inherit! :search_paths
