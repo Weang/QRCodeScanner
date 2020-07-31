@@ -16,12 +16,6 @@ public enum QRCodeCorrectionLevel: String {
     case higher = "H"
 }
 
-public enum LogoBorderType {
-    case none
-    case round
-    case cornerRadius(CGFloat)
-}
-
 public class QRCodeGenerator {
     
     let stringValue: String
@@ -34,6 +28,7 @@ public class QRCodeGenerator {
     public var logoSize: CGFloat = 80
     public var logoBorderWidth: CGFloat = 20
     public var logoBorderColor = UIColor.white
+    public var cornerRadius: CGFloat = 10
     
     public init(stringValue: String) {
         self.stringValue = stringValue
@@ -93,9 +88,14 @@ public class QRCodeGenerator {
         UIGraphicsBeginImageContextWithOptions(CGSize(width: imageSize, height: imageSize), false, 0.0)
         UIGraphicsGetCurrentContext()
         
-        let bezierPath = UIBezierPath.init(roundedRect: CGRect(x: 0, y: 0, width: imageSize, height: imageSize), cornerRadius: 0)
+        let bezierPath = UIBezierPath.init(roundedRect: CGRect(x: 0, y: 0, width: imageSize, height: imageSize), cornerRadius: cornerRadius)
         logoBorderColor.setFill()
         bezierPath.fill()
+        
+        let rect = CGRect(x: logoBorderWidth, y: logoBorderWidth, width: logoSize, height: logoSize)
+        UIRectFill(rect)
+        let path = UIBezierPath.init(roundedRect: rect, cornerRadius: cornerRadius)
+        path.addClip()
         logo.draw(in: CGRect(x: logoBorderWidth, y: logoBorderWidth, width: logoSize, height: logoSize))
         
         guard let image = UIGraphicsGetImageFromCurrentImageContext() else {
