@@ -17,7 +17,7 @@ QRCodeScanner is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'QRCodeScanner'
+pod 'WLQRCodeScanner'
 ```
 
 ## Author
