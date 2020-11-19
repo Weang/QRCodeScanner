@@ -1,5 +1,5 @@
 import XCTest
-import QRCodeScanner
+import WLQRCodeScanner
 
 class Tests: XCTestCase {
     

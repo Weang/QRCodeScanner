@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-import QRCodeScanner
+import WLQRCodeScanner
 
 class ViewController: UIViewController {
     

@@ -29,7 +29,11 @@ open class QRCodeScannerUnit: NSObject {
     public weak var delegate: QRCodeScannerUnitDelegate?
     
     public var scanRect: CGRect = .zero
-    
+    public var metadataObjectTypes: [AVMetadataObject.ObjectType] = [] {
+        didSet {
+            metadataOutput.metadataObjectTypes = metadataObjectTypes
+        }
+    }
     public var isFlashOn: Bool {
         guard let device = device else { return false }
         return device.torchMode == .on
@@ -64,7 +68,7 @@ open class QRCodeScannerUnit: NSObject {
         if session.canAddOutput(metadataOutput) {
             session.addOutput(metadataOutput)
         }
-        metadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
+        metadataObjectTypes = [.qr]
         
         preViewLayer = AVCaptureVideoPreviewLayer.init(session: session)
         preViewLayer?.videoGravity = .resizeAspectFill
